@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>About Our Products | Vijaya Lakshmi Millets & Spices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+  <img src="logo1.png" width="120">
+</div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="benefits.html" class="active">Blog</a>
+  <a href="about.html">About us</a>
+  <a href="javascript:void(0)" onclick="toggleCart()">
+  🛒 <span id="cartCount">0</span>
+</a>
+</nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" style="background-image:url('hero.png')">
+  <div class="hero-content">
+    <h1>Healthy Living Starts Here</h1>
+    <p>Discover the Power of Millets & Traditional Spices</p>
+  </div>
+</section>
+
+<!-- MILLETS INFO -->
+<section class="info-section">
+  <h2>🌾 Why Millets Are Superfoods</h2>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <h3>Rich in Fiber</h3>
+      <p>
+        Millets improve digestion, support gut health and help prevent lifestyle diseases.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Low Glycemic Index</h3>
+      <p>
+        Helps control blood sugar levels, making it ideal for diabetic-friendly diets.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>High Protein Content</h3>
+      <p>
+        Strengthens muscles and supports overall body development naturally.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>100% Gluten Free</h3>
+      <p>
+        A perfect alternative to wheat for people with gluten intolerance.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPICES INFO -->
+<section class="info-section light-bg">
+  <h2>🌶 Benefits of Natural Spices</h2>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <h3>Boosts Immunity</h3>
+      <p>
+        Turmeric, pepper and traditional spices strengthen the immune system naturally.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Improves Digestion</h3>
+      <p>
+        Spices stimulate digestive enzymes and improve metabolism.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Rich in Antioxidants</h3>
+      <p>
+        Protects the body from harmful free radicals and slows aging.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Heart Friendly</h3>
+      <p>
+        Helps regulate cholesterol levels and improves blood circulation.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUALITY PROMISE -->
+<section class="quality-section">
+
+  <!-- Stamp Image -->
+  <div class="quality-stamp">
+    <img src="stamp.png" alt="Quality Guarantee Stamp">
+  </div>
+
+  <!-- Heading -->
+  <div class="quality-content">
+    <h2>🌿 Our Quality Promise</h2>
+
+    <p>
+      At Vijaya Lakshmi Millets & Spices, we source directly from trusted farmers.
+      Our products are chemical-free, naturally processed and hygienically packed.
+      We believe in delivering purity, tradition and health in every pack.
+    </p>
+  </div>
+
+</section>
+
+
+<footer>
+  <p>© 2026 Vijaya Lakshmi Millets & Spices | Pure • Natural • Traditional</p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- CART SIDEBAR (Same as Index) -->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <ul id="cartItems"></ul>
+<p id="deliveryText">
+  Delivery charge: ₹<span id="deliveryCharge">0</span>
+</p>
+
+  <h4>Total: ₹<span id="total">0</span></h4>
+
+  <button class="checkout-btn" onclick="toggleCheckout()">
+     🛒 Proceed
+  </button>
+
+  <div id="checkoutSection" class="checkout-section">
+
+  <h3>Checkout Details</h3>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="custName" placeholder="Enter your full name">
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" id="custPhone" placeholder="Enter your phone number">
+  </div>
+
+  <div class="form-group">
+    <label>Delivery Address</label>
+    <textarea id="custAddress" placeholder="Enter your full delivery address"></textarea>
+  </div>
+
+  <button class="whatsapp-btn" onclick="placeOrder()">
+    📲 Place Order on WhatsApp
+  </button>
+
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+</body>
+</html>

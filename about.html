@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us | Vijaya Lakshmi Millets & Spices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo1.png" width="120">
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="benefits.html">Blog</a>
+    <a href="about.html" class="active">About us</a>
+    <a href="javascript:void(0)" onclick="toggleCart()">
+      🛒 <span id="cartCount">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="background-image:url('hero.png')">
+  <div class="hero-content">
+    <h1>Welcome to Vijaya Lakshmi Millets & Spices</h1>
+    <p>Healthy, Natural & Traditional Foods for Every Home</p>
+  </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-content section">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>
+      At Vijaya Lakshmi Millets & Spices, we believe that true well-being begins with pure, natural food.
+      Our mission is to make nutritious, chemical-free, traditional foods readily accessible to families
+      who care about health, flavor, and authentic nutrition.
+    </p>
+
+    <h2>Who We Are</h2>
+    <p>
+      We are a health-centric brand committed to delivering premium millets, flours, and traditional spices.
+      Every product is sourced directly from trusted farmers and sustainable producers, ensuring freshness,
+      purity, and unmatched quality. Whether you want to follow a healthier lifestyle, manage your diet,
+      or simply enjoy authentic traditional flavors, our range has something for every home.
+    </p>
+
+    <h2>What Makes Us Different</h2>
+    <ul class="about-list">
+      <li><strong>Pure & Natural</strong> — Our products are free from harmful chemicals, preservatives, and artificial additives.</li>
+      <li><strong>Certified Quality</strong> — We prioritize products that meet the highest standards of safety and nutrition.</li>
+      <li><strong>Sustainably Sourced</strong> — We support ethical farming practices that protect the soil, environment, and farming communities.</li>
+      <li><strong>Healthy by Design</strong> — From gluten-free millets to traditional spices, every item is chosen to support balanced, wholesome eating.</li>
+      <li><strong>Convenient & Versatile</strong> — Ready-to-use flours, easy recipes, and detailed usage guides make healthy eating simple and delicious.</li>
+    </ul>
+
+    <h2>Our Promise</h2>
+    <p>
+      At Vijaya Lakshmi Millets & Spices, we don’t just provide food — we provide nourishment you can trust.
+      Every product reflects our dedication to health, tradition, and absolute transparency. When you choose
+      us, you choose authenticity, quality, and a commitment to your well-being.
+    </p>
+  </div>
+</section>
+
+<section class="contact">
+
+  <div class="contact-heading">
+    <h2>Get in Touch</h2>
+    <p>Have questions or need assistance? We're here to help.</p>
+  </div>
+
+  <div class="contact-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7615.92792600203!2d78.563496!3d17.365467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9fd2c5660bb9%3A0xbcb095d68c65d5af!2sVijayalakshmi%20Foods!5e0!3m2!1sen!2sin!4v1769530323105!5m2!1sen!2sin"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="contact-details">
+
+    <p>📍 
+      <a href="https://maps.app.goo.gl/9roFf2QTpDYtHzjE9" target="_blank">
+        2-3-720/2, Lalitha Nagar, Alkapuri, Street:5 Hyderabad Telangana 500068
+      </a>
+    </p>
+
+    <p>📧 
+      <a href="mailto:vijayalakshmifood2k25@gmail.com">
+        vijayalakshmifood2k25@gmail.com
+      </a>
+    </p>
+
+    <p>⏰ Mon–Sat: 9 AM – 8 PM</p>
+
+    <p>📞 
+      <a href="tel:+919618082853">
+        +91 9618082853
+      </a>
+    </p>
+
+  </div>
+
+</section>
+
+<footer class="simple-footer">
+  <p>© 2026 Vijaya Lakshmi Millets & Spices. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<!-- CART SIDEBAR (Same as Index) -->
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <ul id="cartItems"></ul>
+<p id="deliveryText">
+  Delivery charge: ₹<span id="deliveryCharge">0</span>
+</p>
+
+  <h4>Total: ₹<span id="total">0</span></h4>
+
+  <button class="checkout-btn" onclick="toggleCheckout()">
+     🛒 Proceed
+  </button>
+
+  <div id="checkoutSection" class="checkout-section">
+
+  <h3>Checkout Details</h3>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="custName" placeholder="Enter your full name">
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" id="custPhone" placeholder="Enter your phone number">
+  </div>
+
+  <div class="form-group">
+    <label>Delivery Address</label>
+    <textarea id="custAddress" placeholder="Enter your full delivery address"></textarea>
+  </div>
+
+  <button class="whatsapp-btn" onclick="placeOrder()">
+    📲 Place Order on WhatsApp
+  </button>
+
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+</body>
+</html>

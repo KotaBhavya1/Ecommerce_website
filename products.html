@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Products - Vijaya Lakshmi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+  <img src="logo1.png" width="120">
+</div>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="benefits.html">Blog</a>
+  <a href="about.html">About us</a>
+  <a href="javascript:void(0)" onclick="toggleCart()">
+  🛒 <span id="cartCount">0</span>
+</a>
+
+</nav>
+</header>
+
+<section class="page-title">
+  <h1 class="animated-title">Pure & Traditional Millets and Spices</h1>
+  <p>Fresh, Natural & Authentic Products</p>
+</section>
+
+
+
+<section class="filters">
+  <button class="active" onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('spices')">Spices</button>
+  <button onclick="filterProducts('flours')">Flours</button>
+</section>
+
+<section class="products">
+
+<div class="card" data-category="flours">
+  <img src="atta.png">
+  <h3 onclick="openProduct('atta')">Atta</h3>
+  <p style="color: black;">గోధుమ పిండి</p>
+  <p>₹70 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('atta', -1)">−</button>
+    <span id="qty-atta">1</span>
+    <button onclick="updateTempQty('atta', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Atta (1kg)', 70, 'atta')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="pachijonna.png">
+  <h3 onclick="openProduct('Sorgham')">Sorgham</h3>
+  <p style="color: black;">పచ్చ జొన్న పిండి </p>
+  <p>₹80 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('Sorgham', -1)">−</button>
+    <span id="qty-Sorgham">1</span>
+    <button onclick="updateTempQty('Sorgham', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Sorgham (1kg)', 80, 'Sorgham')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="jowar.png">
+  <h3 onclick="openProduct('Jowar')">Jowar</h3>
+  <p style="color: black;">తెల్లజొన్న పిండి </p>
+  <p>₹80 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('Jowar', -1)">−</button>
+    <span id="qty-Jowar">1</span>
+    <button onclick="updateTempQty('Jowar', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Jowar (1kg)', 80, 'Jowar')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="rice_atta.png">
+  <h3 onclick="openProduct('rice-atta')">Rice Flour</h3>
+  <p style="color: black;">బియ్యం పిండి</p>
+  <p>₹75 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('rice-atta', -1)">−</button>
+    <span id="qty-rice-atta">1</span>
+    <button onclick="updateTempQty('rice-atta', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Rice Atta (1kg)', 75, 'rice-atta')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="ragi.png">
+  <h3 onclick="openProduct('ragi')">Ragi Flour</h3>
+  <p style="color: black;">రాగి పిండి</p>
+  <p>₹75 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('ragi', -1)">−</button>
+    <span id="qty-ragi">1</span>
+    <button onclick="updateTempQty('ragi', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Ragi Powder (1kg)', 75, 'ragi')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="bajra.png">
+  <h3 onclick="openProduct('bajra')">Bajra Flour</h3>
+  <p style="color: black;">సజ్జ పిండి</p>
+  <p>₹75 / 1kg</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('bajra', -1)">−</button>
+    <span id="qty-bajra">1</span>
+    <button onclick="updateTempQty('bajra', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Bajra Powder (1kg)', 75, 'bajra')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="spices">
+  <img src="daniya.png">
+  <h3 onclick="openProduct('dhaniya')">Coriander Powder</h3>
+  <p style="color: black;">ధనియాల పొడి</p>
+  <p>₹130 / 500g</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('dhaniya', -1)">−</button>
+    <span id="qty-dhaniya">1</span>
+    <button onclick="updateTempQty('dhaniya', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Dhaniya Powder (500g)', 130, 'dhaniya')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="flours">
+  <img src="Rajgira.jpg">
+  <h3 onclick="openProduct('Rajgira')">Rajgira</h3>
+  <p style="color: black;">తోటకూర గింజల పిండి</p>
+  <p>₹180 / 500gm</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('Rajgira', -1)">−</button>
+    <span id="qty-Rajgira">1</span>
+    <button onclick="updateTempQty('Rajgira', 1)">+</button>
+  </div>
+
+  <button onclick="addToCartWithQty('Rajgira(500gm)', 180, 'Rajgira')">
+    Add to Cart
+  </button>
+</div>
+
+
+
+<div class="card" data-category="spices">
+  <span class="badge">Best Seller</span>
+
+  <img src="mirchi.png">
+  <h3 onclick="openProduct('mirchi')">Mirchi Powder</h3>
+  <p style="color: black;">ఎర్ర కారం పొడి </p>
+
+  <select id="mirchi-size" onchange="updatePrice('mirchi')">
+    <option value="485" data-label="1kg">1kg - ₹485</option>
+    <option value="250" data-label="500g">500gm - ₹250</option>
+    <option value="140" data-label="250g">250gm - ₹140</option>
+  </select>
+
+  <p id="price-mirchi">₹485</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('mirchi', -1)">−</button>
+    <span id="qty-mirchi">1</span>
+    <button onclick="updateTempQty('mirchi', 1)">+</button>
+  </div>
+
+  <button onclick="addSelectedProduct('Mirchi Powder', 'mirchi')">
+    Add to Cart
+  </button>
+</div>
+
+<div class="card" data-category="spices">
+  <img src="turmeric.png">
+  <h3 onclick="openProduct('turmeric')">Turmeric Powder</h3>
+  <p style="color: black;">పసుపు </p>
+
+  <select id="turmeric-size" onchange="updatePrice('turmeric')">
+    <option value="295" data-label="1kg">1kg - ₹295</option>
+    <option value="150" data-label="500g">500gm - ₹150</option>
+    <option value="85" data-label="250g">250gm - ₹85</option>
+  </select>
+
+  <p id="price-turmeric">₹295</p>
+
+  <div class="qty-control">
+    <button onclick="updateTempQty('turmeric', -1)">−</button>
+    <span id="qty-turmeric">1</span>
+    <button onclick="updateTempQty('turmeric', 1)">+</button>
+  </div>
+
+  <button onclick="addSelectedProduct('Turmeric Powder', 'turmeric')">
+    Add to Cart
+  </button>
+</div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <ul id="cartItems"></ul>
+
+  <p id="deliveryText">
+  Delivery charge: ₹<span id="deliveryCharge">0</span>
+</p>
+
+
+  <h4>Total: ₹<span id="total">0</span></h4>
+
+
+  <button class="checkout-btn" onclick="toggleCheckout()">
+     🛒 Proceed 
+  </button>
+
+<!-- Checkout Form -->
+<div id="checkoutSection" class="checkout-section">
+
+  <h3>Checkout Details</h3>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="custName" placeholder="Enter your full name">
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" id="custPhone" placeholder="Enter your phone number">
+  </div>
+
+  <div class="form-group">
+    <label>Delivery Address</label>
+    <textarea id="custAddress" placeholder="Enter your full delivery address"></textarea>
+  </div>
+
+  <button class="whatsapp-btn" onclick="placeOrder()">
+    📲 Place Order on WhatsApp
+  </button>
+
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+</body>
+</html>

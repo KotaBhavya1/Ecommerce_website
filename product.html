@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header> ... same navbar ... </header>
+
+<section class="product-detail">
+  <img id="detailImg">
+  <div>
+    <h2 id="detailName"></h2>
+    <p id="detailPrice"></p>
+    <p id="detailDesc"></p>
+
+    <button id="detailAddBtn">Add to Cart</button>
+  </div>
+</section>
+
+<div id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <ul id="cartItems"></ul>
+  <p id="deliveryText">
+  Delivery charge: ₹<span id="deliveryCharge">0</span>
+</p>
+
+  <h4>Total: ₹<span id="total">0</span></h4>
+
+  <button class="checkout-btn" onclick="toggleCheckout()">
+     🛒 Proceed 
+  </button>
+
+
+  <!-- Checkout Form -->
+<div id="checkoutSection" class="checkout-section">
+
+  <h3>Checkout Details</h3>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="custName" placeholder="Enter your full name">
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="tel" id="custPhone" placeholder="Enter your phone number">
+  </div>
+
+  <div class="form-group">
+    <label>Delivery Address</label>
+    <textarea id="custAddress" placeholder="Enter your full delivery address"></textarea>
+  </div>
+
+  <button class="whatsapp-btn" onclick="placeOrder()">
+    📲 Place Order on WhatsApp
+  </button>
+
+</div>
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
