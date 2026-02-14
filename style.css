@@ -1752,4 +1752,28 @@ footer {
         line-height: 1.6;
     }
 
+
+}
+
+@media (max-width: 768px) {
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .benefit-card {
+        padding: 15px;
+    }
+
+    .benefit-card h3 {
+        font-size: 15px;
+    }
+
+    .benefit-card p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
 }
