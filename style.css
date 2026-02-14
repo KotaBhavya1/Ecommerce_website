@@ -1043,14 +1043,6 @@ body {
     color: #2f6b2f;
 }
 
-/* ===== BENEFITS GRID ===== */
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
 /* ===== BENEFIT CARD ===== */
 
 .benefit-card {
@@ -1526,11 +1518,6 @@ footer {
     background: #3e6b3e;
 }
 
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
 
 .benefit-card {
     background: white;
@@ -1752,13 +1739,27 @@ footer {
         line-height: 1.6;
     }
 
-
 }
 
-@media (max-width: 768px) {
+/* ================= BENEFITS GRID FINAL FIX ================= */
+
+/* Desktop */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
     .benefits-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
+/* Mobile */
+@media (max-width: 600px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
