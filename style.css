@@ -1766,3 +1766,21 @@ footer {
         height: 140px;
     }
 }
+/* Logo Container */
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+/* Remove underline */
+.logo a {
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
+}
