@@ -1442,14 +1442,6 @@ footer {
     margin-bottom: 40px;
 }
 
-.featured-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
-
 .featured-card {
     background: white;
     padding: 20px;
@@ -1692,14 +1684,6 @@ footer {
 
 }
 
-.featured-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 cards in desktop */
-    gap: 25px;
-    max-width: 1000px;
-    margin: auto;
-}
 
 .marquee-section {
     background: #3b2415;
@@ -1744,5 +1728,41 @@ footer {
         }
 
 
+    }
+}
+
+/* ================================
+   OUR BEST PRODUCTS GRID FIX
+================================ */
+
+/* Desktop - 3 cards */
+.featured-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .featured-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .featured-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .featured-card {
+        padding: 15px;
+    }
+
+    .featured-card img {
+        height: 140px;
     }
 }
