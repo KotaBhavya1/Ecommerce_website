@@ -1784,3 +1784,6 @@ footer {
         height: 50px;
     }
 }
+.featured-card {
+    position: relative;
+}
